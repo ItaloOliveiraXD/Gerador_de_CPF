@@ -25,5 +25,7 @@ def gera_cpf():
     formula = 11 - (soma_2 % 11)
     digito_2 = 0 if formula > 9 else formula
     cpf += str(digito_2)
+
+    cpf_com_caracter = f'{cpf[0:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[9:12]}'
     
-    return cpf
+    return cpf_com_caracter
